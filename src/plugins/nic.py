@@ -22,7 +22,9 @@ class Nic(object):
         ip_path = 'ip'
         if ip_path:
             cmd1 = command_func('{0} link show'.format(ip_path))
+
             cmd2 = command_func('{0} addr show'.format(ip_path))
+            print(cmd1,cmd2)
             ifaces = self._interfaces_ip(cmd1 + '\n' + cmd2)
         return ifaces
 
