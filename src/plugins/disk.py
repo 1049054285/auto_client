@@ -9,10 +9,9 @@ class Disk(object):
             output = open(os.path.join(settings.BASEDIR, 'files/disk.out'), 'r', encoding='utf-8').read()
         else:
             # output = cmd_func("sudo MegaCli  -PDList -aALL")
-            output = cmd_func("sudo df -h")
+            output = cmd_func("df -h")
 
         # return self.parse(output)
-        print('disk plugin return  result：', output)
         return output
 
     def parse(self, content):

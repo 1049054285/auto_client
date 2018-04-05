@@ -18,7 +18,7 @@ PLUGIN_ITEMS = {
 API = 'http://127.0.0.1:8000/api/server'
 
 # 客户端采集模式 agent,ssh,salt
-MODE = 'ssh'
+MODE = 'salt'
 
 #SSH模式 配置项
 SSH_USER = 'root'

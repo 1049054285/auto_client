@@ -10,9 +10,8 @@ class Memory(object):
 
         else:
             # output = cmd_func("sudo dmidecode  -q -t 17 2>/dev/null")
-            output = cmd_func("sudo free -m")
+            output = cmd_func("free -m")
         # return self.parse(output)
-        print('mem plugin return  result：', output)
         return output
 
     def parse(self, content):
