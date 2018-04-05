@@ -3,7 +3,7 @@ import os
 BASEDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #调试模式开关(DEBUG)
-TEST = True
+TEST = False
 
 # 配置信息采集插件
 PLUGIN_ITEMS = {
