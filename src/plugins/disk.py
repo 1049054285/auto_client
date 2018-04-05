@@ -12,6 +12,7 @@ class Disk(object):
             output = cmd_func("sudo df -h")
 
         # return self.parse(output)
+        print('disk plugin return  result：', output)
         return output
 
     def parse(self, content):

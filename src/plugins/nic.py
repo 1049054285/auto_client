@@ -23,7 +23,7 @@ class Nic(object):
         if ip_path:
             cmd1 = command_func('sudo {0} link show'.format(ip_path))
             cmd2 = command_func('sudo {0} addr show'.format(ip_path))
-            print('cmd1:',cmd1,'cmd2:',cmd2)
+            print('link show:',cmd1,'addr show:',cmd2)
             ifaces = self._interfaces_ip(cmd1 + '\n' + cmd2)
         return ifaces
 
