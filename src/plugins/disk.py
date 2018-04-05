@@ -11,7 +11,8 @@ class Disk(object):
             # output = cmd_func("sudo MegaCli  -PDList -aALL")
             output = cmd_func("sudo df -h")
 
-        return self.parse(output)
+        # return self.parse(output)
+        return output
 
     def parse(self, content):
         """

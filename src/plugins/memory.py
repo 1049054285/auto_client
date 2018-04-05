@@ -11,7 +11,8 @@ class Memory(object):
         else:
             # output = cmd_func("sudo dmidecode  -q -t 17 2>/dev/null")
             output = cmd_func("sudo free -m")
-        return self.parse(output)
+        # return self.parse(output)
+        return output
 
     def parse(self, content):
         """
