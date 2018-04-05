@@ -52,7 +52,7 @@ class PluginManager(object):
             ssh.close()
         elif self.mode == "SALT":
             import subprocess
-            result = subprocess.getoutput('salt "%s" cmd.run "%s"' %(self.hostname,cmd))
+            result = subprocess.getoutput('salt "%s" cmd.run "%s"' %(self.hostname,cmd)).strip().split('\n')[1:]
         else:
             raise Exception("模式选择错误：AGENT,SSH,SALT")
         return result
