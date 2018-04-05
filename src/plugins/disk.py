@@ -8,7 +8,8 @@ class Disk(object):
         if test:
             output = open(os.path.join(settings.BASEDIR, 'files/disk.out'), 'r', encoding='utf-8').read()
         else:
-            output = cmd_func("sudo MegaCli  -PDList -aALL")
+            # output = cmd_func("sudo MegaCli  -PDList -aALL")
+            output = cmd_func("sudo df -h")
 
         return self.parse(output)
 

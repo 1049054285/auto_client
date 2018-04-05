@@ -9,7 +9,8 @@ class Memory(object):
             output = open(os.path.join(settings.BASEDIR, 'files/memory.out'), 'r', encoding='utf-8').read()
 
         else:
-            output = cmd_func("sudo dmidecode  -q -t 17 2>/dev/null")
+            # output = cmd_func("sudo dmidecode  -q -t 17 2>/dev/null")
+            output = cmd_func("sudo free -m")
         return self.parse(output)
 
     def parse(self, content):
