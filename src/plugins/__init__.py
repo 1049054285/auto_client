@@ -48,7 +48,7 @@ class PluginManager(object):
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             ssh.connect(hostname=self.hostname, port=self.ssh_port, username=self.ssh_user, password=self.ssh_pwd)
             stdin, stdout, stderr = ssh.exec_command(cmd)
-            result = stdout.read()
+            result = stdout.read().decode("utf-8")
             ssh.close()
         elif self.mode == "SALT":
             import subprocess
