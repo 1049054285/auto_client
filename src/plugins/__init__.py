@@ -6,7 +6,7 @@ class PluginManager(object):
     def __init__(self,hostname=None):
         self.hostname = hostname
         self.plugin_items = settings.PLUGIN_ITEMS
-        self.mode = settings.MODE
+        self.mode = settings.MODE.upper()
         self.test = settings.TEST
         if self.mode == "SSH":
             self.ssh_user = settings.SSH_USER
